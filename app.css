@@ -62,3 +62,9 @@ h1,h2
     letter-spacing: 4px;
     color: red;
 }
+
+button
+{
+    border: 2cm;
+    border-color: black;
+}

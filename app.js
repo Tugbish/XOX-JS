@@ -1,9 +1,11 @@
 const blocks = document.querySelectorAll(".block");
 const playerText = document.getElementById('player');
 const errorText = document.getElementById('error');
+
 let player = 'X';
 let gameOver = false;
 let winner;
+
 
 
 function startGame() {
@@ -57,6 +59,7 @@ function checkWin() {
     checkColoumns()
     checkDiagonals()
     //win
+   
 
 }
 
@@ -112,4 +115,22 @@ function checkDiagonals(){
 }
 
 
+function restart() {
+    player = 'X';
+    playerText.textContent = `${player}'s Turn !`;
+    errorText.textContent = '';
+    gameOver = false;
+    blocks.forEach(block => block.textContent = '');
+    blocks.forEach(block => block.style.color = 'black');
+
+    
+}
+
 startGame();
+
+// When someone wins then click to restart button and start new game which is start game
+// When tie then click to restart button and start new game
+
+
+
+
